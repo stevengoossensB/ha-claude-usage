@@ -30,6 +30,7 @@ from homeassistant.helpers.selector import (
 
 from .api import (
     ClaudeAuthError,
+    ClaudeRateLimitError,
     ClaudeUsageError,
     build_authorize_url,
     exchange_code,
@@ -99,6 +100,9 @@ class ClaudeUsageConfigFlow(ConfigFlow, domain=DOMAIN):
                 except ClaudeAuthError as err:
                     _LOGGER.warning("Claude login failed: %s", err)
                     errors["base"] = "invalid_auth"
+                except ClaudeRateLimitError as err:
+                    _LOGGER.warning("Claude login rate limited: %s", err)
+                    errors["base"] = "rate_limited"
                 except ClaudeUsageError as err:
                     _LOGGER.warning("Claude login failed: %s", err)
                     errors["base"] = "cannot_connect"

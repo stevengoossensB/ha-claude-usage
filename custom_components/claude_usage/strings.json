@@ -32,7 +32,8 @@
       "invalid_auth": "Authentication failed. Check the code or key and try again (each sign-in code can only be used once; the link has been renewed).",
       "invalid_code": "No code found in what you pasted.",
       "state_mismatch": "That code belongs to a different sign-in attempt. Use the link shown on this page.",
-      "cannot_connect": "Could not reach Anthropic. Try again later."
+      "cannot_connect": "Could not reach Anthropic. Try again later.",
+      "rate_limited": "Anthropic is rate limiting sign-in requests. Wait a few minutes, then use the (renewed) sign-in link again."
     },
     "abort": {
       "already_configured": "This account is already configured.",

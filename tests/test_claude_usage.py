@@ -177,3 +177,23 @@ async def test_admin_flow_and_sensors(hass: HomeAssistant, aioclient_mock) -> No
     assert states["sensor.anthropic_api_acme_total_tokens_this_month"] == "168"
     assert states["sensor.anthropic_api_acme_total_tokens_today"] == "3"
     assert states["sensor.anthropic_api_acme_cost_this_month"] == "2.5"
+
+
+async def test_login_rate_limited_shows_specific_error(hass: HomeAssistant, aioclient_mock) -> None:
+    aioclient_mock.post(OAUTH_TOKEN_URL, status=429, json={"error": {"type": "rate_limit_error"}})
+    result = await hass.config_entries.flow.async_init(
+        DOMAIN, context={"source": config_entries.SOURCE_USER}
+    )
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], {"next_step_id": "subscription"}
+    )
+    result = await hass.config_entries.flow.async_configure(result["flow_id"], {"code": "c#s"})
+    # state "s" doesn't match, so use a code without state
+    result = await hass.config_entries.flow.async_configure(result["flow_id"], {"code": "c"})
+    assert result["errors"] == {"base": "rate_limited"}
+
+
+def test_user_agent_is_not_claude_code() -> None:
+    from custom_components.claude_usage.const import USER_AGENT
+
+    assert not USER_AGENT.startswith("claude-")
