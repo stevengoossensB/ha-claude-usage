@@ -1,0 +1,55 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Claude Usage",
+        "description": "What do you want to monitor?",
+        "menu_options": {
+          "subscription": "Claude Pro/Max subscription limits (5-hour and weekly)",
+          "admin_api": "Anthropic API token usage and cost (Admin API key)"
+        }
+      },
+      "subscription": {
+        "title": "Sign in to Claude",
+        "description": "1. [Open the Claude sign-in page]({auth_url}) and approve access.\n2. Claude shows an authentication code (it looks like `abc…#xyz…`).\n3. Paste the whole code below.\n\nThis creates a separate login just for Home Assistant, so it does not interfere with Claude Code on your computer.",
+        "data": {
+          "code": "Authentication code"
+        }
+      },
+      "admin_api": {
+        "title": "Anthropic Admin API",
+        "description": "Create an Admin API key (starts with `sk-ant-admin`) at platform.claude.com → Settings → Admin keys. Only organisation admins can create one.",
+        "data": {
+          "admin_key": "Admin API key"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate",
+        "description": "The stored Claude credentials no longer work. Continue to sign in again."
+      }
+    },
+    "error": {
+      "invalid_auth": "Authentication failed. Check the code or key and try again (each sign-in code can only be used once; the link has been renewed).",
+      "invalid_code": "No code found in what you pasted.",
+      "state_mismatch": "That code belongs to a different sign-in attempt. Use the link shown on this page.",
+      "cannot_connect": "Could not reach Anthropic. Try again later."
+    },
+    "abort": {
+      "already_configured": "This account is already configured.",
+      "reauth_successful": "Re-authentication successful."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Polling",
+        "data": {
+          "scan_interval": "Update interval (seconds)"
+        },
+        "data_description": {
+          "scan_interval": "The subscription endpoint is rate limited; do not go below 120 s."
+        }
+      }
+    }
+  }
+}
