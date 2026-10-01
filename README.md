@@ -1,7 +1,22 @@
 # Claude Usage for Home Assistant
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
-[![Validate](https://github.com/stevengoossensB/ha-claude-usage/actions/workflows/validate.yml/badge.svg)](https://github.com/stevengoossensB/ha-claude-usage/actions/workflows/validate.yml)
+[![Maintainer](https://img.shields.io/badge/maintainer-stevengoossensB-green?style=for-the-badge&logo=github)](https://github.com/stevengoossensB)
+
+[![MIT License](https://img.shields.io/github/license/stevengoossensB/ha-claude-usage?style=flat-square)](https://github.com/stevengoossensB/ha-claude-usage/blob/main/LICENSE)
+[![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=flat-square)](https://github.com/hacs/integration)
+
+[![GitHub Issues](https://img.shields.io/github/issues/stevengoossensB/ha-claude-usage)](https://github.com/stevengoossensB/ha-claude-usage/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/stevengoossensB/ha-claude-usage/pulls)
+
+
+[![Validation Status](https://github.com/stevengoossensB/ha-claude-usage/actions/workflows/validate.yml/badge.svg)](https://github.com/stevengoossensB/ha-claude-usage/actions/workflows/validate.yml)
+[![Python](https://img.shields.io/badge/Python-FFD43B?logo=python)](https://github.com/stevengoossensB/ha-claude-usage/search?l=python)
+[![Latest Release](https://img.shields.io/github/v/release/stevengoossensB/ha-claude-usage?logo=github)](https://github.com/stevengoossensB/ha-claude-usage/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/stevengoossensB/ha-claude-usage)](https://github.com/stevengoossensB/ha-claude-usage/commits)
+
+[![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&slug=stevengoossens&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff)](https://coff.ee/stevengoossens)
+
+[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg?style=flat-square)](https://my.home-assistant.io/redirect/hacs_repository/?owner=stevengoossensB&repository=ha-claude-usage&category=Integration)
 
 Track your **Claude** usage in Home Assistant:
 
@@ -18,7 +33,6 @@ Companion integrations: [ha-codex-usage](https://github.com/stevengoossensB/ha-c
 2. Install **Claude Usage** and restart Home Assistant.
 3. Settings → Devices & services → **Add integration** → *Claude Usage*.
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=stevengoossensB&repository=ha-claude-usage&category=integration)
 
 ## Setup
 
