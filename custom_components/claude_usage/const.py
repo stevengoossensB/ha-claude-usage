@@ -33,7 +33,7 @@ PROFILE_URL: Final = "https://api.anthropic.com/api/oauth/profile"
 OAUTH_BETA: Final = "oauth-2025-04-20"
 # Anthropic rate limits the token endpoint for claude-code/* user agents from
 # non-CLI clients, so identify honestly as this integration.
-USER_AGENT: Final = "ha-claude-usage/0.1.1"
+USER_AGENT: Final = "ha-claude-usage/0.1.2"
 
 # Admin API
 ADMIN_BASE_URL: Final = "https://api.anthropic.com/v1/organizations"
